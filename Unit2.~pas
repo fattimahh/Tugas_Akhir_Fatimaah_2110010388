@@ -46,6 +46,7 @@ type
     procedure DBGrid1CellClick(Column: TColumn);
     procedure Button4Click(Sender: TObject);
     procedure Button5Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -217,6 +218,11 @@ Edit3.Clear;
 Edit4.Clear;
 Edit5.Clear;
 posisiawal;
+end;
+
+procedure TForm2.Button6Click(Sender: TObject);
+begin
+frxrprt1.ShowReport();
 end;
 
 end.
