@@ -32,6 +32,14 @@ type
     Edit5: TEdit;
     Edit6: TEdit;
     Edit7: TEdit;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
     procedure DBGrid1CellClick(Column: TColumn);
     procedure Button1Click(Sender: TObject);
     procedure bersih;
@@ -40,6 +48,7 @@ type
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure Button5Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -218,6 +227,11 @@ Edit5.Clear;
 Edit6.Clear;
 Edit7.Clear;
 posisiawal;
+end;
+
+procedure TForm5.Button6Click(Sender: TObject);
+begin
+frxReport1.showreport();
 end;
 
 end.

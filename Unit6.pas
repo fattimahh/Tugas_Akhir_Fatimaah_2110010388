@@ -19,6 +19,7 @@ type
     procedure DataWaliKelas1Click(Sender: TObject);
     procedure DataPoin1Click(Sender: TObject);
     procedure DataOrangTuaWali1Click(Sender: TObject);
+    procedure DataCatatan1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,7 +31,7 @@ var
 
 implementation
 
-uses Unit1, Unit2, Unit3;
+uses Unit1, Unit2, Unit3, Unit4, Unit5;
 
 {$R *.dfm}
 
@@ -52,6 +53,11 @@ end;
 procedure TForm6.DataOrangTuaWali1Click(Sender: TObject);
 begin
 form4.show;
+end;
+
+procedure TForm6.DataCatatan1Click(Sender: TObject);
+begin
+form5.show;
 end;
 
 end.

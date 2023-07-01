@@ -36,6 +36,7 @@ object Form6: TForm6
       end
       object DataCatatan1: TMenuItem
         Caption = 'Data Catatan'
+        OnClick = DataCatatan1Click
       end
     end
   end

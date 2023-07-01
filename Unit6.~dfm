@@ -32,6 +32,7 @@ object Form6: TForm6
       end
       object DataOrangTuaWali1: TMenuItem
         Caption = 'Data Orang Tua/ Wali'
+        OnClick = DataOrangTuaWali1Click
       end
       object DataCatatan1: TMenuItem
         Caption = 'Data Catatan'
