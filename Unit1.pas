@@ -56,6 +56,8 @@ type
     procedure Button2Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure DBGrid1CellClick(Column: TColumn);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -203,6 +205,63 @@ zquery1.SQL.Clear;
 zquery1.SQL.Add('select * from tabel_siswa');
 zquery1.Open;
 ShowMessage('Data Berhasil Disimpan');
+posisiawal;
+end;
+end;
+
+procedure TForm1.DBGrid1CellClick(Column: TColumn);
+begin
+begin
+id:= zquery1.Fields[0].AsString;
+edit1.Text:= zquery1.Fields[1].AsString;
+edit2.Text:= zquery1.Fields[2].AsString;
+edit3.Text:= zquery1.Fields[3].AsString;
+edit4.Text:= zquery1.Fields[4].AsString;
+edit5.Text:= zquery1.Fields[5].AsString;
+datetimepicker1.Date := zquery1.Fields[6].AsDateTime;
+combobox1.Text:= zquery1.Fields[7].AsString;
+combobox2.Text:= zquery1.Fields[8].AsString;
+combobox3.Text:= zquery1.Fields[9].AsString;
+edit6.Text:= zquery1.Fields[10].AsString;
+edit7.Text:= zquery1.Fields[11].AsString;
+edit8.Text:= zquery1.Fields[12].AsString;
+edit9.Text:= zquery1.Fields[13].AsString;
+edit1.Enabled:= True;
+edit2.Enabled:= True;
+edit3.Enabled:= True;
+edit4.Enabled:= True;
+edit5.Enabled:= True;
+combobox1.Enabled:= True;
+combobox2.Enabled:= True;
+combobox3.Enabled:= True;
+edit6.Enabled:= True;
+edit7.Enabled:= True;
+edit8.Enabled:= True;
+edit9.Enabled:= True;
+button1.Enabled:= False;
+button2.Enabled:= False;
+button3.Enabled:= True;
+button4.Enabled:= True;
+button5.Enabled:= True;
+button6.Enabled:= False;
+end;
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
+begin
+zquery1.SQL.Clear;
+zquery1.SQL.Add(' delete from tabel_siswa where id_siswa ="'+id+'"');
+zquery1. ExecSQL;
+zquery1.SQL.Clear;
+zquery1.SQL.Add('select * from tabel_siswa');
+zquery1.Open;
+ShowMessage('DATA BERHASIL DIHAPUS');
+posisiawal;
+end else
+begin
+ShowMessage('DATA BATAL DIHAPUS');
 posisiawal;
 end;
 end;
