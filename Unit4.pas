@@ -45,6 +45,8 @@ type
     procedure posisiawal;
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -178,4 +180,21 @@ ShowMessage('Data Berhasil Disimpan');
 posisiawal;
 end;
 end;
+procedure TForm4.Button5Click(Sender: TObject);
+begin
+Edit1.Clear;
+Edit2.Clear;
+Edit3.Clear;
+Edit4.Clear;
+Edit5.Clear;
+Edit6.Clear;
+Edit7.Clear;
+posisiawal;
+end;
+
+procedure TForm4.Button6Click(Sender: TObject);
+begin
+frxReport1.ShowReport();
+end;
+
 end.

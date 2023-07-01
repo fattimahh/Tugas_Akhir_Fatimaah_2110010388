@@ -45,6 +45,7 @@ type
     procedure posisiawal;
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -169,7 +170,7 @@ begin
 end else
 begin
 zquery1.SQL.Clear;
-zquery1.SQL.Add(' update tabel_ortuatauwali set nik="'+edit1.Text+'",nama="'+edit2.Text+'",jenis_kelamin="'+combobox1.Text+'",pendidikan="'+edit3.Text+'",no_telpon="'+edit4.Text+'",alamat="'+edit5.Text+'",pekerjaan="'+edit6.Text+'",status="'+edit7.Text+'" where id_ortuatauwali ="'+id+'"');
+zquery1.SQL.Add(' update tabel_ortuatauwali set nik="'+edit1.Text+'",nama="'+edit2.Text+'",jenis_kelamin="'+combobox1.Text+'",pendidikan="'+edit3.Text+'",no_telepon="'+edit4.Text+'",alamat="'+edit5.Text+'",pekerjaan="'+edit6.Text+'",status="'+edit7.Text+'" where id_ortuatauwali ="'+id+'"');
 zquery1.ExecSQL ;
 zquery1.SQL.Clear;
 zquery1.SQL.Add('select * from tabel_ortuatauwali');
@@ -178,4 +179,16 @@ ShowMessage('Data Berhasil Disimpan');
 posisiawal;
 end;
 end;
+procedure TForm4.Button5Click(Sender: TObject);
+begin
+Edit1.Clear;
+Edit2.Clear;
+Edit3.Clear;
+Edit4.Clear;
+Edit5.Clear;
+Edit6.Clear;
+Edit7.Clear;
+posisiawal;
+end;
+
 end.

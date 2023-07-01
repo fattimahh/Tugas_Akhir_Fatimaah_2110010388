@@ -1,8 +1,8 @@
 object Form4: TForm4
   Left = 192
-  Top = 125
+  Top = 124
   Width = 870
-  Height = 450
+  Height = 451
   Caption = 'Form4'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -200,6 +200,7 @@ object Form4: TForm4
       Height = 25
       Caption = 'BATAL'
       TabOrder = 12
+      OnClick = Button5Click
     end
     object Button6: TButton
       Left = 504
@@ -208,6 +209,7 @@ object Form4: TForm4
       Height = 25
       Caption = 'LAPORAN'
       TabOrder = 13
+      OnClick = Button6Click
     end
   end
   object DataSource1: TDataSource
