@@ -249,6 +249,7 @@ object Form1: TForm1
       Height = 25
       Caption = 'BATAL'
       TabOrder = 15
+      OnClick = Button5Click
     end
     object Button6: TButton
       Left = 480

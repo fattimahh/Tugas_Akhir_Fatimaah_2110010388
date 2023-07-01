@@ -57,6 +57,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure DBGrid1CellClick(Column: TColumn);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -245,3 +246,24 @@ button5.Enabled:= True;
 button6.Enabled:= False;
 end;
 end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
+begin
+zquery1.SQL.Clear;
+zquery1.SQL.Add(' delete from tabel_siswa where id_siswa ="'+id+'"');
+zquery1. ExecSQL;
+zquery1.SQL.Clear;
+zquery1.SQL.Add('select * from tabel_siswa');
+zquery1.Open;
+ShowMessage('DATA BERHASIL DIHAPUS');
+posisiawal;
+end else
+begin
+ShowMessage('DATA BATAL DIHAPUS');
+posisiawal;
+end;
+end;
+
+end.
