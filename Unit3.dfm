@@ -91,6 +91,7 @@ object Form3: TForm3
       Height = 25
       Caption = 'SIMPAN'
       TabOrder = 4
+      OnClick = Button2Click
     end
     object Button3: TButton
       Left = 152
@@ -99,6 +100,7 @@ object Form3: TForm3
       Height = 25
       Caption = 'UBAH'
       TabOrder = 5
+      OnClick = Button3Click
     end
     object Button4: TButton
       Left = 224
@@ -107,6 +109,7 @@ object Form3: TForm3
       Height = 25
       Caption = 'HAPUS'
       TabOrder = 6
+      OnClick = Button4Click
     end
     object Button5: TButton
       Left = 296
@@ -115,6 +118,7 @@ object Form3: TForm3
       Height = 25
       Caption = 'BATAL'
       TabOrder = 7
+      OnClick = Button5Click
     end
     object Button6: TButton
       Left = 368
@@ -123,6 +127,7 @@ object Form3: TForm3
       Height = 25
       Caption = 'LAPORAN'
       TabOrder = 8
+      OnClick = Button6Click
     end
   end
   object DBGrid1: TDBGrid
@@ -130,12 +135,14 @@ object Form3: TForm3
     Top = 248
     Width = 320
     Height = 120
+    DataSource = DataSource1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'MS Sans Serif'
     TitleFont.Style = []
+    OnCellClick = DBGrid1CellClick
   end
   object DataSource1: TDataSource
     DataSet = ZQuery1
@@ -173,6 +180,7 @@ object Form3: TForm3
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
     AutoEncodeStrings = False
+    Connected = True
     HostName = 'localhost'
     Port = 3306
     Database = 'laporansiswa'
@@ -184,6 +192,7 @@ object Form3: TForm3
   end
   object ZQuery1: TZQuery
     Connection = ZConnection1
+    Active = True
     SQL.Strings = (
       'select * from tabel_poin')
     Params = <>
