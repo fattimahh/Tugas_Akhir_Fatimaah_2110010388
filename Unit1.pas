@@ -59,6 +59,7 @@ type
     procedure DBGrid1CellClick(Column: TColumn);
     procedure Button4Click(Sender: TObject);
     procedure Button5Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -279,6 +280,11 @@ Edit7.Clear;
 Edit8.Clear;
 Edit9.Clear;
 posisiawal;
+end;
+
+procedure TForm1.Button6Click(Sender: TObject);
+begin
+frxreport1.ShowReport();
 end;
 
 end.

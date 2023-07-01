@@ -58,6 +58,7 @@ type
     procedure Button3Click(Sender: TObject);
     procedure DBGrid1CellClick(Column: TColumn);
     procedure Button4Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -264,6 +265,20 @@ begin
 ShowMessage('DATA BATAL DIHAPUS');
 posisiawal;
 end;
+end;
+
+procedure TForm1.Button5Click(Sender: TObject);
+begin
+Edit1.Clear;
+Edit2.Clear;
+Edit3.Clear;
+Edit4.Clear;
+Edit5.Clear;
+Edit6.Clear;
+Edit7.Clear;
+Edit8.Clear;
+Edit9.Clear;
+posisiawal;
 end;
 
 end.
