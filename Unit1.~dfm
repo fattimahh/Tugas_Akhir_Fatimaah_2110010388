@@ -258,6 +258,7 @@ object Form1: TForm1
       Height = 25
       Caption = 'LAPORAN'
       TabOrder = 16
+      OnClick = Button6Click
     end
     object Button1: TButton
       Left = 56
