@@ -45,7 +45,6 @@ object Form5: TForm5
     Connected = True
     HostName = 'localhost'
     Port = 3306
-    Database = 'laporansiswa'
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 'C:\Users\USER\OneDrive\Documents\TugasAkhir\libmysql.dll'
@@ -54,7 +53,6 @@ object Form5: TForm5
   end
   object ZQuery1: TZQuery
     Connection = ZConnection1
-    Active = True
     SQL.Strings = (
       'select * from tabel_catatan')
     Params = <>
