@@ -50,6 +50,10 @@ type
     DataSource1: TDataSource;
     frxDBDataset1: TfrxDBDataset;
     frxReport1: TfrxReport;
+    procedure FormCreate(Sender: TObject);
+    procedure bersih;
+    procedure posisiawal;
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -62,5 +66,61 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm1.bersih;
+begin
+edit1.Clear;
+edit2.Clear;
+edit3.Clear;
+edit4.Clear;
+edit5.Clear;
+edit6.Clear;
+edit7.Clear;
+edit8.Clear;
+edit9.Clear;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+posisiawal;
+end;
+
+procedure TForm1.posisiawal;
+begin
+Button1.Enabled:= True;
+Button2.Enabled:= False;
+Button3.Enabled:= False;
+Button4.Enabled:= False;
+Button5.Enabled:= False;
+Button6.Enabled:= True;
+Edit1.Enabled:= False;
+Edit2.Enabled:= False;
+Edit3.Enabled:= False;
+Edit4.Enabled:= False;
+Edit5.Enabled:= False;
+Edit6.Enabled:= False;
+Edit7.Enabled:= False;
+Edit8.Enabled:= False;
+Edit9.Enabled:= False;
+end;
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+button1.Enabled:= False;
+button2.Enabled:= True;
+button3.Enabled:= False;
+button4.Enabled:= False;
+button5.Enabled:= True;
+button6.Enabled:= False;
+Edit1.Enabled:= True;
+Edit2.Enabled:= True;
+Edit3.Enabled:= True;
+Edit4.Enabled:= True;
+Edit5.Enabled:= True;
+Edit6.Enabled:= True;
+Edit7.Enabled:= True;
+Edit8.Enabled:= True;
+Edit9.Enabled:= True;
+end;
 
 end.

@@ -11,6 +11,8 @@ object Form1: TForm1
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
+  OnShow = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -34,7 +36,7 @@ object Form1: TForm1
     TabOrder = 0
     object Label2: TLabel
       Left = 24
-      Top = 64
+      Top = 56
       Width = 18
       Height = 13
       Caption = 'NIS'
@@ -129,7 +131,6 @@ object Form1: TForm1
       Width = 121
       Height = 21
       TabOrder = 0
-      Text = 'Edit1'
     end
     object Edit2: TEdit
       Left = 128
@@ -137,7 +138,6 @@ object Form1: TForm1
       Width = 121
       Height = 21
       TabOrder = 1
-      Text = 'Edit1'
     end
     object Edit3: TEdit
       Left = 128
@@ -145,7 +145,6 @@ object Form1: TForm1
       Width = 121
       Height = 21
       TabOrder = 2
-      Text = 'Edit1'
     end
     object Edit4: TEdit
       Left = 128
@@ -153,7 +152,6 @@ object Form1: TForm1
       Width = 121
       Height = 21
       TabOrder = 3
-      Text = 'Edit1'
     end
     object Edit5: TEdit
       Left = 128
@@ -161,7 +159,6 @@ object Form1: TForm1
       Width = 121
       Height = 21
       TabOrder = 4
-      Text = 'Edit1'
     end
     object DateTimePicker1: TDateTimePicker
       Left = 128
@@ -179,7 +176,6 @@ object Form1: TForm1
       Height = 21
       ItemHeight = 13
       TabOrder = 6
-      Text = 'ComboBox1'
       Items.Strings = (
         'Perempuan'
         'Laki - Laki')
@@ -191,7 +187,6 @@ object Form1: TForm1
       Height = 21
       ItemHeight = 13
       TabOrder = 7
-      Text = 'ComboBox2'
     end
     object ComboBox3: TComboBox
       Left = 472
@@ -200,7 +195,6 @@ object Form1: TForm1
       Height = 21
       ItemHeight = 13
       TabOrder = 8
-      Text = 'ComboBox3'
     end
     object Edit6: TEdit
       Left = 472
@@ -208,7 +202,6 @@ object Form1: TForm1
       Width = 121
       Height = 21
       TabOrder = 9
-      Text = 'Edit1'
     end
     object Edit7: TEdit
       Left = 472
@@ -216,7 +209,6 @@ object Form1: TForm1
       Width = 121
       Height = 21
       TabOrder = 10
-      Text = 'Edit1'
     end
     object Edit8: TEdit
       Left = 472
@@ -224,7 +216,6 @@ object Form1: TForm1
       Width = 121
       Height = 21
       TabOrder = 11
-      Text = 'Edit1'
     end
     object Edit9: TEdit
       Left = 472
@@ -232,7 +223,6 @@ object Form1: TForm1
       Width = 121
       Height = 21
       TabOrder = 12
-      Text = 'Edit1'
     end
     object Button1: TButton
       Left = 40
@@ -241,6 +231,7 @@ object Form1: TForm1
       Height = 25
       Caption = 'BARU'
       TabOrder = 13
+      OnClick = FormShow
     end
     object Button2: TButton
       Left = 128
