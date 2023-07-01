@@ -224,30 +224,14 @@ object Form1: TForm1
       Height = 21
       TabOrder = 12
     end
-    object Button1: TButton
-      Left = 40
-      Top = 288
-      Width = 75
-      Height = 25
-      Caption = 'BARU'
-      TabOrder = 13
-      OnClick = FormShow
-    end
-    object Button2: TButton
-      Left = 128
-      Top = 288
-      Width = 75
-      Height = 25
-      Caption = 'SIMPAN'
-      TabOrder = 14
-    end
     object Button3: TButton
-      Left = 216
+      Left = 224
       Top = 288
       Width = 75
       Height = 25
       Caption = 'UBAH'
-      TabOrder = 15
+      TabOrder = 13
+      OnClick = Button3Click
     end
     object Button4: TButton
       Left = 304
@@ -255,7 +239,7 @@ object Form1: TForm1
       Width = 75
       Height = 25
       Caption = 'HAPUS'
-      TabOrder = 16
+      TabOrder = 14
     end
     object Button5: TButton
       Left = 392
@@ -263,7 +247,7 @@ object Form1: TForm1
       Width = 75
       Height = 25
       Caption = 'BATAL'
-      TabOrder = 17
+      TabOrder = 15
     end
     object Button6: TButton
       Left = 480
@@ -271,7 +255,25 @@ object Form1: TForm1
       Width = 75
       Height = 25
       Caption = 'LAPORAN'
+      TabOrder = 16
+    end
+    object Button1: TButton
+      Left = 56
+      Top = 288
+      Width = 75
+      Height = 25
+      Caption = 'BARU'
+      TabOrder = 17
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Left = 136
+      Top = 288
+      Width = 75
+      Height = 25
+      Caption = 'SIMPAN'
       TabOrder = 18
+      OnClick = Button2Click
     end
   end
   object DBGrid1: TDBGrid

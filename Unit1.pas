@@ -38,8 +38,6 @@ type
     Label12: TLabel;
     Label13: TLabel;
     Label14: TLabel;
-    Button1: TButton;
-    Button2: TButton;
     Button3: TButton;
     Button4: TButton;
     Button5: TButton;
@@ -50,10 +48,14 @@ type
     DataSource1: TDataSource;
     frxDBDataset1: TfrxDBDataset;
     frxReport1: TfrxReport;
+    Button1: TButton;
+    Button2: TButton;
     procedure FormCreate(Sender: TObject);
     procedure bersih;
     procedure posisiawal;
-    procedure FormShow(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -61,6 +63,7 @@ type
   end;
 
 var
+id:string;
   Form1: TForm1;
 
 implementation
@@ -104,7 +107,70 @@ Edit8.Enabled:= False;
 Edit9.Enabled:= False;
 end;
 
-procedure TForm1.FormShow(Sender: TObject);
+
+procedure TForm1.button2Click(Sender: TObject);
+begin
+if edit1.Text ='' then
+begin
+ShowMessage('NIS TIDAK BOLEH KOSONG!');
+end else
+if edit2.Text ='' then
+begin
+ShowMessage('NISN TIDAK BOLEH KOSONG!');
+end else
+if edit3.Text ='' then
+begin
+ShowMessage('NIK TIDAK BOLEH KOSONG!');
+end else
+if edit4.Text ='' then
+begin
+ShowMessage('NAMA TIDAK BOLEH KOSONG!');
+end else
+if edit5.Text ='' then
+begin
+ShowMessage('TEMPAT LAHIR TIDAK BOLEH KOSONG!');
+end else
+if combobox1.Text ='Pilih jenis kelamin' then
+begin
+ShowMessage('TOLONG ISI JENIS KELAMIN');
+end else
+if combobox2.Text ='Pilih tingkat kelas' then
+begin
+ShowMessage('TOLONG ISI TINGKAT KELAS');
+end else
+if combobox3.Text ='Pilih jurusan' then
+begin
+ShowMessage('TOLONG ISI JURUSAN');
+end else
+if edit6.Text ='' then
+begin
+ShowMessage('ID WALI KELAS TIDAK BOLEH KOSONG!');
+end else
+if edit7.Text ='' then
+begin
+ShowMessage('ALAMAT TIDAK BOLEH KOSONG!');
+end else
+if edit8.Text ='' then
+begin
+ShowMessage('NO TELPON TIDAK BOLEH KOSONG!');
+end else
+if edit9.Text ='' then
+begin
+ShowMessage('STATUS TIDAK BOLEH KOSONG!');
+end else
+begin
+zquery1.SQL.Clear;
+zquery1.SQL.Add('insert into tabel_siswa values(null,"'+edit1.Text+'","'+edit2.Text+'","'+edit3.Text+'","'+edit4.Text+'","'+edit5.Text+'","'+formatdatetime('yyyy-mm-dd',datetimepicker1.Date)+'","'+combobox1.Text+'","'+combobox2.Text+'","'+combobox3.Text+'","'+edit6.Text+'","'+edit7.Text+'","'+edit8.Text+'","'+edit9.Text+'")');
+zquery1.ExecSQL ;
+zquery1.SQL.Clear;
+zquery1.SQL.Add('select * from tabel_siswa');
+zquery1.Open;
+ShowMessage('Data Berhasil Disimpan');
+posisiawal;
+end;
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
 begin
 button1.Enabled:= False;
 button2.Enabled:= True;
@@ -121,6 +187,24 @@ Edit6.Enabled:= True;
 Edit7.Enabled:= True;
 Edit8.Enabled:= True;
 Edit9.Enabled:= True;
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+if (edit1.Text= '')or(edit2.Text= '')or(edit3.Text= '')or(edit4.Text= '')or(edit5.Text= '')or(edit6.Text= '')or(edit7.Text= '')or(edit8.Text= '')or(edit9.Text= '')then
+begin
+  ShowMessage('Inputan Wajib Di Isi');
+end else
+begin
+zquery1.SQL.Clear;
+zquery1.SQL.Add('update tabel_siswa set nis="'+edit1.Text+'",nisn="'+edit2.Text+'",nik="'+edit3.Text+'",nama="'+edit4.Text+'",tempat_lahir="'+edit5.Text+'",tanggal_lahir="'+formatdatetime('yyyy-mm-dd',datetimepicker1.Date)+'",jenis_kelamin="'+combobox1.Text+'",tingkat_kelas="'+combobox2.Text+'",jurusan="'+combobox3.Text+'",id_walikelas="'+edit6.Text+'",alamat="'+edit7.Text+'",no_telp="'+edit8.Text+'",status="'+edit9.Text+'" where id_siswa ="'+id+'"');
+zquery1.ExecSQL ;
+zquery1.SQL.Clear;
+zquery1.SQL.Add('select * from tabel_siswa');
+zquery1.Open;
+ShowMessage('Data Berhasil Disimpan');
+posisiawal;
+end;
 end;
 
 end.
