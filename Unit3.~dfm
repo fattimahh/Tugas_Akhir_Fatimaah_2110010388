@@ -127,6 +127,7 @@ object Form3: TForm3
       Height = 25
       Caption = 'LAPORAN'
       TabOrder = 8
+      OnClick = Button6Click
     end
   end
   object DBGrid1: TDBGrid

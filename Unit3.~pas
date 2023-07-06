@@ -39,6 +39,7 @@ type
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure Button5Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -179,6 +180,11 @@ Edit1.Clear;
 Edit2.Clear;
 Edit3.Clear;
 posisiawal;
+end;
+
+procedure TForm3.Button6Click(Sender: TObject);
+begin
+frxreport1.ShowReport();
 end;
 
 end.

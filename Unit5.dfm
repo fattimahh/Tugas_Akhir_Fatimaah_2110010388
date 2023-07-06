@@ -2,7 +2,7 @@ object Form5: TForm5
   Left = 192
   Top = 125
   Width = 870
-  Height = 450
+  Height = 467
   Caption = 'Form5'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -223,7 +223,6 @@ object Form5: TForm5
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cGET_ACP
-    UTF8StringsAsWideField = False
     AutoEncodeStrings = False
     Connected = True
     HostName = 'localhost'
@@ -231,7 +230,7 @@ object Form5: TForm5
     Database = 'laporansiswa'
     User = 'root'
     Protocol = 'mysql'
-    LibraryLocation = 'C:\Users\USER\OneDrive\Documents\TugasAkhir\libmysql.dll'
+    LibraryLocation = 'libmysql.dll'
     Left = 512
     Top = 8
   end
@@ -245,7 +244,7 @@ object Form5: TForm5
     Top = 8
   end
   object frxReport1: TfrxReport
-    Version = '4.0.11'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -277,6 +276,7 @@ object Form5: TForm5
       PaperHeight = 297.000000000000000000
       PaperSize = 9
       object ReportTitle1: TfrxReportTitle
+        FillType = ftBrush
         Height = 52.913420000000000000
         Top = 18.897650000000000000
         Width = 793.701300000000000000
@@ -297,6 +297,7 @@ object Form5: TForm5
         end
       end
       object PageHeader1: TfrxPageHeader
+        FillType = ftBrush
         Height = 52.913420000000000000
         Top = 94.488250000000000000
         Width = 793.701300000000000000
@@ -387,6 +388,7 @@ object Form5: TForm5
         end
       end
       object MasterData1: TfrxMasterData
+        FillType = ftBrush
         Height = 49.133890000000000000
         Top = 207.874150000000000000
         Width = 793.701300000000000000
@@ -500,11 +502,13 @@ object Form5: TForm5
         end
       end
       object Footer1: TfrxFooter
+        FillType = ftBrush
         Height = 22.677180000000000000
         Top = 279.685220000000000000
         Width = 793.701300000000000000
       end
       object PageFooter1: TfrxPageFooter
+        FillType = ftBrush
         Height = 22.677180000000000000
         Top = 362.834880000000000000
         Width = 793.701300000000000000
@@ -515,6 +519,7 @@ object Form5: TForm5
     UserName = 'frxDBDataset1'
     CloseDataSource = False
     DataSet = ZQuery1
+    BCDToCurrency = False
     Left = 632
     Top = 8
   end

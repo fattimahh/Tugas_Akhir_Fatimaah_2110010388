@@ -152,11 +152,12 @@ object Form3: TForm3
   object frxDBDataset1: TfrxDBDataset
     UserName = 'frxDBDataset1'
     CloseDataSource = False
+    BCDToCurrency = False
     Left = 768
     Top = 232
   end
   object frxReport1: TfrxReport
-    Version = '4.0.11'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -178,7 +179,6 @@ object Form3: TForm3
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cGET_ACP
-    UTF8StringsAsWideField = False
     AutoEncodeStrings = False
     Connected = True
     HostName = 'localhost'
@@ -186,7 +186,7 @@ object Form3: TForm3
     Database = 'laporansiswa'
     User = 'root'
     Protocol = 'mysql'
-    LibraryLocation = 'C:\Users\USER\OneDrive\Documents\TugasAkhir\libmysql.dll'
+    LibraryLocation = 'libmysql.dll'
     Left = 768
     Top = 104
   end

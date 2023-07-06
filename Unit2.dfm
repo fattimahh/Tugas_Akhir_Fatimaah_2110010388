@@ -204,7 +204,6 @@ object Form2: TForm2
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cGET_ACP
-    UTF8StringsAsWideField = False
     AutoEncodeStrings = False
     Connected = True
     HostName = 'localhost'
@@ -212,7 +211,7 @@ object Form2: TForm2
     Database = 'laporansiswa'
     User = 'root'
     Protocol = 'mysql'
-    LibraryLocation = 'C:\Users\USER\OneDrive\Documents\TugasAkhir\libmysql.dll'
+    LibraryLocation = 'libmysql.dll'
     Left = 728
     Top = 56
   end
@@ -228,6 +227,7 @@ object Form2: TForm2
   object frxDBDataset1: TfrxDBDataset
     UserName = 'frxDBDataset1'
     CloseDataSource = False
+    BCDToCurrency = False
     Left = 728
     Top = 208
   end

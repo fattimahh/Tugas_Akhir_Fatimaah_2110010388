@@ -219,7 +219,6 @@ object Form4: TForm4
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cGET_ACP
-    UTF8StringsAsWideField = False
     AutoEncodeStrings = False
     Connected = True
     HostName = 'localhost'
@@ -227,7 +226,7 @@ object Form4: TForm4
     Database = 'laporansiswa'
     User = 'root'
     Protocol = 'mysql'
-    LibraryLocation = 'C:\Users\USER\OneDrive\Documents\TugasAkhir\libmysql.dll'
+    LibraryLocation = 'libmysql.dll'
     Left = 744
     Top = 16
   end
@@ -235,13 +234,13 @@ object Form4: TForm4
     Connection = ZConnection1
     Active = True
     SQL.Strings = (
-      'select * from tabel_poin')
+      'select * from tabel_ortuatauwali')
     Params = <>
     Left = 752
     Top = 56
   end
   object frxReport1: TfrxReport
-    Version = '4.0.11'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -264,6 +263,7 @@ object Form4: TForm4
   object frxDBDataset1: TfrxDBDataset
     UserName = 'frxDBDataset1'
     CloseDataSource = False
+    BCDToCurrency = False
     Left = 768
     Top = 136
   end
